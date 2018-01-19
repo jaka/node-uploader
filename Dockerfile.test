@@ -1,0 +1,8 @@
+FROM uploader
+
+COPY test /app/test/
+
+RUN su -c "npm install" node
+RUN npm update && npm install -g mocha
+
+CMD su -c "DEV=test mocha --reporter spec" node

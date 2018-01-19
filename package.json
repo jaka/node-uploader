@@ -1,0 +1,24 @@
+{
+  "name": "uploader",
+  "version": "1.0.0",
+  "description": "Uploader",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha"
+  },
+  "author": "jaka",
+  "devDependencies": {
+    "chai": "4.1.x",
+    "mocha": "4.1.x",
+    "supertest": "3.0.x"
+  },
+  "dependencies": {
+    "express": "4.15.x",
+    "mime": "2.1.x",
+    "multer": "1.3.x",
+    "path": "0.12.x",
+    "redis": "2.7.x"
+  }
+}

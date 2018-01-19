@@ -1,0 +1,12 @@
+FROM node:9.3-alpine
+
+WORKDIR /app
+COPY package.json app.js config.js server.js /app/
+COPY src /app/src/
+
+RUN chown node /app
+RUN su -c "npm install --production" node
+
+CMD su -c "npm run start" node
+
+EXPOSE 8000
